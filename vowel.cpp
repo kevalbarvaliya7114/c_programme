@@ -5,17 +5,9 @@ int main(){
     char c;
     
     cout<<"enter the character:";
-    cin >> c;
+    cin>>c;
 
-    if(c=a){
-        cout<<"vowel";
-    }else if(c=e){
-        cout<<"vowel";
-    }else if(c=i){
-        cout<<"vowel";
-    }else if(c=o){
-        cout<<"vowel";
-    }else if(c=u){
+    if(c=='a'||c=='e' ||c=='i' || c=='o' || c=='u'){
         cout<<"vowel";
     }else{
         cout<<"consonant";
