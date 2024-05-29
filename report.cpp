@@ -7,8 +7,8 @@ class report{
     int adno;
     char name[20];
     float marks[5];
-    int avg;
-    void getavg(int avg);
+    float avgmark;
+    float getavg(float marks[5]);
 
     public:
     void readinfo(){
@@ -18,24 +18,31 @@ class report{
         cin>>name;
 
         for(int i=0;i<5;i++){
-          cout<<"Enter the marks:";
+          cout<<"Enter the marks:"<<i+1<<":-";
             cin>>marks[i];
+            avgmark=getavg(marks);
         }
     }
     void displayinfo(){
         cout<<"admission no.:"<<adno<<endl;
         cout<<"name:"<<name<<endl;
-        cout<<"total marks:"<<getavg(avg)<<endl;
+        for(int i=0;i<5;i++){
+            cout<<"mark"<<i+1<<":-"<<marks[i]<<endl;
+        }
+        cout<<"average"<<avgmark<<endl;
     }
 };
-int report:: getavg(int avg){
-    for(int k=0;k<5;k++){
-        avg+=marks[k];
-    }
-      avg=avg/5;
-      return avg;
+float report:: getavg(float marks[5]){
+      float to=0;
+      for(int i=0;i<5;i++){
+        to+=marks[i];
+      }
+      return to/5;
 }
 
 int main(){
+    class report r1;
+    r1.readinfo();
+    r1.displayinfo();
     return 0;
 }
