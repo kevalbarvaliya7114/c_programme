@@ -19,10 +19,7 @@ class book{
         cin>>booktitle;
         cout<<"\nEnter the price of copy:";
         cin>>price;
-    //    cout<<"Enter the numbers of copy you Want to purchase:";
-      //  cin>>copy;
-
-       
+ 
     }
     void purchase(){
          cout<<"Enter the numbers of copy you Want to purchase:";
